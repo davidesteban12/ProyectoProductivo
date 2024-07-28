@@ -18,7 +18,7 @@ GameObject:
   - component: {fileID: -5307676328843039009}
   - component: {fileID: 656774757754942692}
   - component: {fileID: -70349060744344972}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Ojo
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -178,6 +178,7 @@ MonoBehaviour:
   animator: {fileID: 1800689628726543136}
   enemyMovement: {fileID: -5307676328843039009}
   enemyStateMachine: {fileID: 656774757754942692}
+  enemyHealth: {fileID: 0}
 --- !u!114 &1805388319194045181
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -192,6 +193,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   health: 0
   maxHealth: 10
+  oroGratis: 2
 --- !u!114 &-5307676328843039009
 MonoBehaviour:
   m_ObjectHideFlags: 0

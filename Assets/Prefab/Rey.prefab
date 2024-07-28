@@ -183,6 +183,7 @@ MonoBehaviour:
   animator: {fileID: 1664841786981526517}
   defenderMovement: {fileID: 1744150413}
   defenderStateMachine: {fileID: 0}
+  Base: 0
 --- !u!114 &1744150412
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -196,13 +197,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   State: 1
-  range: 1.5
+  range: 1
   layerMask:
     serializedVersion: 2
     m_Bits: 64
   defenderMovement: {fileID: 1744150413}
   animator: {fileID: 1664841786981526517}
   vida: {fileID: -2924489475896310640}
+  defenderAttack: {fileID: 0}
   rangeOriginal: 0
 --- !u!114 &1744150413
 MonoBehaviour:
@@ -217,8 +219,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   rb: {fileID: 1744150408}
-  speed: 0.5
-  speedOriginal: 0.5
+  speed: 0.9
+  speedOriginal: 0.9
 --- !u!95 &1664841786981526517 stripped
 Animator:
   m_CorrespondingSourceObject: {fileID: 3893902771499658729, guid: 196867184eaf0f644ab4db34154d5472, type: 3}

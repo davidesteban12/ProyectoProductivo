@@ -178,6 +178,7 @@ MonoBehaviour:
   animator: {fileID: 1979875582078875740}
   enemyMovement: {fileID: -4748779144319721172}
   enemyStateMachine: {fileID: 3996355204455573413}
+  enemyHealth: {fileID: 0}
 --- !u!114 &-7234550935984676424
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -192,6 +193,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   health: 0
   maxHealth: 50
+  oroGratis: 5
 --- !u!114 &-4748779144319721172
 MonoBehaviour:
   m_ObjectHideFlags: 0

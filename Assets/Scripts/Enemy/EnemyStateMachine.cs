@@ -52,6 +52,7 @@ public class EnemyStateMachine : MonoBehaviour
                 range = 0;
                 State = DefenderState.Attack;
                 enemyMovement.enabled = false;
+                enemyMovement.speed = 0.5f;
                 
             }
         }
@@ -73,7 +74,7 @@ public class EnemyStateMachine : MonoBehaviour
         {
            range=rangeOriginal;
            
-           //enemyMovement.speed = enemyMovement.speedOriginal;          
+           enemyMovement.speed = enemyMovement.speedOriginal;          
         }
         enemyMovement.enabled = true;
     }

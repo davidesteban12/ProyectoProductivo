@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 public class TowerHealth : MonoBehaviour
 {
@@ -18,10 +19,11 @@ public class TowerHealth : MonoBehaviour
     void Update()
     {
        slider.value = currentHealth;
-        if (currentHealth <= 0) { 
+        if (currentHealth <= 0) 
+        { 
        
             Destroy(gameObject);
-
+            SceneManager.LoadScene("perdio");
         }
     }
 }

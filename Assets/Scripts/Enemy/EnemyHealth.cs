@@ -15,7 +15,7 @@ public class EnemyHealth : MonoBehaviour
 
     void Update()
     {
-        if (health < 0)
+        if (health <=0)
         {
             StartCoroutine(WaitForDead());
         }

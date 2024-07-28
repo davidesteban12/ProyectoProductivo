@@ -8,12 +8,20 @@ public class PadreSpaw : MonoBehaviour
     public float seconds = 2f;
     public int maxActiveSpawns = 3; // Número máximo de spawns activos a la vez
     private float timer;
-    private List<GameObject> activeSpawns;
+    private Queue<GameObject> activeSpawnsQueue;
+    private Queue<GameObject> inactiveSpawnsQueue;
 
     void Start()
     {
         timer = seconds;
-        activeSpawns = new List<GameObject>();
+        activeSpawnsQueue = new Queue<GameObject>();
+        inactiveSpawnsQueue = new Queue<GameObject>(spaw); // Inicializa la cola de spawns inactivos con todos los spawns
+
+        // Asegúrate de que todos los spawns estén inicialmente desactivados
+        foreach (GameObject spawn in spaw)
+        {
+            spawn.SetActive(false);
+        }
     }
 
     void Update()
@@ -27,37 +35,26 @@ public class PadreSpaw : MonoBehaviour
 
     void SpawnEnemy()
     {
-        if (activeSpawns.Count < maxActiveSpawns)
+        if (activeSpawnsQueue.Count < maxActiveSpawns && inactiveSpawnsQueue.Count > 0)
         {
-            // Encuentra un spawn inactivo
-            GameObject spawn = FindInactiveSpawn();
+            // Encuentra un spawn inactivo de la cola
+            GameObject spawn = inactiveSpawnsQueue.Dequeue();
             if (spawn != null)
             {
                 spawn.SetActive(true);
-                activeSpawns.Add(spawn);
+                activeSpawnsQueue.Enqueue(spawn);
                 StartCoroutine(DeactivateSpawn(spawn));
             }
         }
         timer = seconds;
     }
 
-    GameObject FindInactiveSpawn()
-    {
-        foreach (GameObject spawn in spaw)
-        {
-            if (!spawn.activeInHierarchy)
-            {
-                return spawn;
-            }
-        }
-        return null;
-    }
-
     IEnumerator DeactivateSpawn(GameObject spawn)
     {
         yield return new WaitForSeconds(seconds);
         spawn.SetActive(false);
-        activeSpawns.Remove(spawn);
+        activeSpawnsQueue.Dequeue();
+        inactiveSpawnsQueue.Enqueue(spawn);
     }
 
     public void ActivateSpaw()

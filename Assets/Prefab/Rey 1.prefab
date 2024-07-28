@@ -167,6 +167,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   health: 0
   maxHealth: 165
+  oroGratis: 55
 --- !u!114 &-4966639357360328389
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -199,7 +200,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   State: 1
-  range: 1.5
+  range: 1
   layerMask:
     serializedVersion: 2
     m_Bits: 128

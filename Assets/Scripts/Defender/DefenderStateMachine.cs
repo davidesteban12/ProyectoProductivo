@@ -56,7 +56,8 @@ public class DefenderStateMachine : MonoBehaviour
                 animator.SetTrigger("Atack");
                 range = 0;
                 State = DefenderState.Attack;
-                defenderMovement.enabled = false;             
+                defenderMovement.enabled = false;
+                defenderMovement.speed = 0.5f;
             }
         }
         if (State == DefenderState.Attack)
@@ -73,11 +74,10 @@ public class DefenderStateMachine : MonoBehaviour
         {
            range = rangeOriginal;
 
-            if(defenderAttack.Base==true)
-            {
+            
                 defenderMovement.speed = defenderMovement.speedOriginal;
-            }
-          ;
+            
+          
         }
         defenderMovement.enabled = true;
     }

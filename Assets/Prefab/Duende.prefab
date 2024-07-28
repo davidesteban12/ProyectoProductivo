@@ -178,6 +178,7 @@ MonoBehaviour:
   animator: {fileID: 4056050159772818756}
   enemyMovement: {fileID: -6145317203583580619}
   enemyStateMachine: {fileID: 4745322759649351584}
+  enemyHealth: {fileID: 0}
 --- !u!114 &1413765071608463189
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -192,6 +193,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   health: 0
   maxHealth: 15
+  oroGratis: 1
 --- !u!114 &-6145317203583580619
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -220,7 +222,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   State: 1
-  range: 1.5
+  range: 1
   layerMask:
     serializedVersion: 2
     m_Bits: 128
