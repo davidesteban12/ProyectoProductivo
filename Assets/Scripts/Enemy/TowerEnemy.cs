@@ -1,28 +1,36 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
+
 public class TowerEnemy : MonoBehaviour
 {
     public float maxhealth = 20;
     public float currentHealth;
     public Slider slider;
-    // Start is called before the first frame update
+
     void Start()
     {
         currentHealth = maxhealth;
         slider.maxValue = maxhealth;
     }
 
-    // Update is called once per frame
     void Update()
     {
         slider.value = currentHealth;
         if (currentHealth <= 0)
         {
-
-            Destroy(gameObject);
-
+                  // Cambia a la escena de selección de niveles
+            SceneChanger sceneChanger = FindObjectOfType<SceneChanger>();
+            if (sceneChanger != null)
+            {
+                sceneChanger.UnlockNextLevel(1); // Desbloquear el nivel 2 al completar el nivel 1
+            }
+            SceneManager.LoadScene("Slc"); // Cambiar a la selección de niveles
+            Destroy(gameObject); // Destruye el objeto
         }
     }
 }
+
+
