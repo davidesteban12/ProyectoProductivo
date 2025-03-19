@@ -9,11 +9,13 @@ public class TowerEnemy : MonoBehaviour
     public float maxhealth = 20;
     public float currentHealth;
     public Slider slider;
+    public GameObject siguiente;
 
     void Start()
     {
         currentHealth = maxhealth;
         slider.maxValue = maxhealth;
+        siguiente.SetActive(false);
     }
 
     void Update()
@@ -21,16 +23,12 @@ public class TowerEnemy : MonoBehaviour
         slider.value = currentHealth;
         if (currentHealth <= 0)
         {
-                  // Cambia a la escena de selección de niveles
-            SceneChanger sceneChanger = FindObjectOfType<SceneChanger>();
-            if (sceneChanger != null)
-            {
-                sceneChanger.UnlockNextLevel(1); // Desbloquear el nivel 2 al completar el nivel 1
-            }
-            SceneManager.LoadScene("Slc"); // Cambiar a la selección de niveles
-            Destroy(gameObject); // Destruye el objeto
+          siguiente.SetActive(true);
+          Destroy(gameObject);
         }
     }
 }
+
+
 
 

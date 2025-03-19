@@ -6,6 +6,8 @@ TagManager:
   tags:
   - Rey
   - Tower
+  - nivel2
+  - nivel3
   layers:
   - Default
   - TransparentFX

@@ -253,7 +253,7 @@ GameObject:
   - component: {fileID: 271386357}
   - component: {fileID: 271386356}
   m_Layer: 5
-  m_Name: Menu_Inicial
+  m_Name: botoness
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -337,7 +337,7 @@ GameObject:
   - component: {fileID: 331933466}
   m_Layer: 5
   m_Name: BotonNivel 2
-  m_TagString: Untagged
+  m_TagString: nivel2
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -360,7 +360,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.3144876, y: 0.6268919}
   m_AnchorMax: {x: 0.5667623, y: 0.69533026}
-  m_AnchoredPosition: {x: 0.00015258789, y: -0.000045776367}
+  m_AnchoredPosition: {x: 0.00012207031, y: -0.000061035156}
   m_SizeDelta: {x: -0.0000038146973, y: -0.000020503998}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &331933466
@@ -388,7 +388,7 @@ MonoBehaviour:
     m_HighlightedColor: {r: 0.050980397, g: 0.078431375, b: 0.14509805, a: 0.2}
     m_PressedColor: {r: 0.050980397, g: 0.078431375, b: 0.14509805, a: 0.41960785}
     m_SelectedColor: {r: 0.050980397, g: 0.078431375, b: 0.14509805, a: 0.59607846}
-    m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
+    m_DisabledColor: {r: 0, g: 0, b: 0, a: 1}
     m_ColorMultiplier: 1
     m_FadeDuration: 0.1
   m_SpriteState:
@@ -407,16 +407,16 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 944520241}
+      - m_Target: {fileID: 1088763574}
         m_TargetAssemblyTypeName: SceneChanger, Assembly-CSharp
-        m_MethodName: Nivel2
-        m_Mode: 1
+        m_MethodName: CambiarEscena
+        m_Mode: 5
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
-          m_StringArgument: 
+          m_StringArgument: Nivel_02
           m_BoolArgument: 0
         m_CallState: 2
 --- !u!114 &331933467
@@ -792,7 +792,7 @@ MonoBehaviour:
     m_HighlightedColor: {r: 0.050980397, g: 0.078431375, b: 0.14509805, a: 0.2}
     m_PressedColor: {r: 0.050980397, g: 0.078431375, b: 0.14509805, a: 0.41960785}
     m_SelectedColor: {r: 0.050980397, g: 0.078431375, b: 0.14509805, a: 0.59607846}
-    m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
+    m_DisabledColor: {r: 0, g: 0, b: 0, a: 1}
     m_ColorMultiplier: 1
     m_FadeDuration: 0.1
   m_SpriteState:
@@ -811,16 +811,16 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 944520241}
+      - m_Target: {fileID: 1088763574}
         m_TargetAssemblyTypeName: SceneChanger, Assembly-CSharp
-        m_MethodName: Nivel1
-        m_Mode: 1
+        m_MethodName: CambiarEscena
+        m_Mode: 5
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
-          m_StringArgument: 
+          m_StringArgument: Nivel_01
           m_BoolArgument: 0
         m_CallState: 2
 --- !u!114 &868336972
@@ -873,7 +873,6 @@ GameObject:
   - component: {fileID: 944520244}
   - component: {fileID: 944520243}
   - component: {fileID: 944520242}
-  - component: {fileID: 944520241}
   m_Layer: 5
   m_Name: Canvas (1)
   m_TagString: Untagged
@@ -881,19 +880,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &944520241
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 944520240}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 84446e682fa24c548af4bf47c0c51f30, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  towerenemy: {fileID: 0}
 --- !u!114 &944520242
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1129,6 +1115,70 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1071472461}
   m_CullTransparentMesh: 1
+--- !u!1 &1088763571
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1088763573}
+  - component: {fileID: 1088763572}
+  - component: {fileID: 1088763574}
+  m_Layer: 0
+  m_Name: controlador
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1088763572
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1088763571}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7697d1b750517524281da643328b014d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  botoneNiveles:
+  - {fileID: 868336971}
+  - {fileID: 331933466}
+  - {fileID: 2135156467}
+  - {fileID: 1912716934}
+  desbloquearNiveles: 0
+  resetearProgreso: 0
+--- !u!4 &1088763573
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1088763571}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 960, y: 540, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 3
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1088763574
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1088763571}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 84446e682fa24c548af4bf47c0c51f30, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1099857922
 GameObject:
   m_ObjectHideFlags: 0
@@ -1628,14 +1678,13 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1647901693}
-  - component: {fileID: 1647901694}
   m_Layer: 5
   m_Name: Seguros
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1647901693
 RectTransform:
   m_ObjectHideFlags: 0
@@ -1660,24 +1709,6 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &1647901694
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1647901692}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c91cbdf01f2a56640b71b958137fb651, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  levelLocks:
-  - {fileID: 1805364096}
-  - {fileID: 1626924100}
-  - {fileID: 970584456}
-  - {fileID: 1383386447}
-  reiniciar: 1
 --- !u!1 &1805364096
 GameObject:
   m_ObjectHideFlags: 0
@@ -1926,7 +1957,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.31448764, y: 0.40281793}
   m_AnchorMax: {x: 0.5667623, y: 0.4712563}
-  m_AnchoredPosition: {x: 0.000061035156, y: -0.000030517578}
+  m_AnchoredPosition: {x: 0, y: -0.000030517578}
   m_SizeDelta: {x: -0.0000076293945, y: -0.000020503998}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1912716934
@@ -1954,7 +1985,7 @@ MonoBehaviour:
     m_HighlightedColor: {r: 0.050980397, g: 0.078431375, b: 0.14509805, a: 0.2}
     m_PressedColor: {r: 0.050980397, g: 0.078431375, b: 0.14509805, a: 0.41960785}
     m_SelectedColor: {r: 0.050980397, g: 0.078431375, b: 0.14509805, a: 0.59607846}
-    m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
+    m_DisabledColor: {r: 0, g: 0, b: 0, a: 1}
     m_ColorMultiplier: 1
     m_FadeDuration: 0.1
   m_SpriteState:
@@ -1973,16 +2004,16 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 944520241}
+      - m_Target: {fileID: 1088763574}
         m_TargetAssemblyTypeName: SceneChanger, Assembly-CSharp
-        m_MethodName: Nivel4
-        m_Mode: 1
+        m_MethodName: CambiarEscena
+        m_Mode: 5
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
-          m_StringArgument: 
+          m_StringArgument: Nivel_04
           m_BoolArgument: 0
         m_CallState: 2
 --- !u!114 &1912716935
@@ -2037,7 +2068,7 @@ GameObject:
   - component: {fileID: 2135156467}
   m_Layer: 5
   m_Name: BotonNivel 3
-  m_TagString: Untagged
+  m_TagString: nivel3
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2060,7 +2091,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.31448764, y: 0.5204105}
   m_AnchorMax: {x: 0.5667623, y: 0.5888488}
-  m_AnchoredPosition: {x: 0.000061035156, y: -0.00004196167}
+  m_AnchoredPosition: {x: 0, y: -0.000045776367}
   m_SizeDelta: {x: -0.0000076293945, y: -0.000020503998}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2135156467
@@ -2088,7 +2119,7 @@ MonoBehaviour:
     m_HighlightedColor: {r: 0.050980397, g: 0.078431375, b: 0.14509805, a: 0.2}
     m_PressedColor: {r: 0.050980397, g: 0.078431375, b: 0.14509805, a: 0.41960785}
     m_SelectedColor: {r: 0.050980397, g: 0.078431375, b: 0.14509805, a: 0.59607846}
-    m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
+    m_DisabledColor: {r: 0, g: 0, b: 0, a: 1}
     m_ColorMultiplier: 1
     m_FadeDuration: 0.1
   m_SpriteState:
@@ -2107,16 +2138,16 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 944520241}
+      - m_Target: {fileID: 1088763574}
         m_TargetAssemblyTypeName: SceneChanger, Assembly-CSharp
-        m_MethodName: Nivel3
-        m_Mode: 1
+        m_MethodName: CambiarEscena
+        m_Mode: 5
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
-          m_StringArgument: 
+          m_StringArgument: Nivel_03
           m_BoolArgument: 0
         m_CallState: 2
 --- !u!114 &2135156468
